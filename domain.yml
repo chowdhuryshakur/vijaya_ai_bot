@@ -1,0 +1,75 @@
+version: '3.1'
+intents:
+- affirm
+- deny
+- human_handoff
+- allocate_doctor_slot
+- ask_hospital_contact
+- appointment_req_with_next_day_name
+- user_have_report_num
+- tell_report_num
+entities:
+- day_name
+- period_name
+- report_num
+slots:
+  day_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: day_name
+  period_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: period_name
+  report_num:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: report_num
+responses:
+  utter_handoff:
+  - text: I apologize for any inconvenience caused. Allow me to transfer you to a live agent for further assistance.
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_response_for_appointment_req_with_next_day_name:
+  - text: |-
+     Sure, let me check availability. How about scheduling your diagnostic centre appointment on the upcoming {day_name} {period_name}? 
+     If that suits you, we can proceed with the booking.
+  utter_confirm_response_for_appointment_req_with_next_day_name:
+  - text: |-
+     Excellent choice! Your diagnostic centre appointment is scheduled for next {day_name} {period_name} at 2:30PM. Thank you!
+  utter_response_for_doctor_slot:
+  - text: |-
+      I recommend checking with the diagnostic centre directly for the allocated slots for doctor's appointments, 
+      as the availability may vary. They can provide you with the most accurate and up-to-date information on available
+      time slots.
+  utter_response_contact_number:
+  - text: |-
+      Please Go through the below information
+      Contact Number: +91 91219 99111
+      Email: info@vijayadiagnostic.com
+      Website: https://www.vijayadiagnostic.com/
+  utter_ask_report_number:
+  - text: |-
+      Sure, please provide your report number, and I'll retrieve your diagnostic report for you.
+  utter_ask_moment_for_retrieve_report:
+  - text: |-
+      Thank you! I'll retrieve your report with the number {report_num}. Please give me a moment.
+  utter_successfully_retrieve_report:
+  - text: |-
+      Thank you for your patience. I've successfully retrieved your diagnostic report. You can view or download it here. If you have any questions, feel free to ask.
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  
+actions:
+- utter_response_for_doctor_slot
+- utter_response_contact_number
+- utter_response_for_appointment_req_with_next_day_name
+- utter_confirm_response_for_appointment_req_with_next_day_name
+- utter_ask_report_number
+- utter_ask_moment_for_retrieve_report
+- utter_successfully_retrieve_report

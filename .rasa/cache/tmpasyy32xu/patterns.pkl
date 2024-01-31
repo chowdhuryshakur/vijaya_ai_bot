@@ -1,0 +1,6 @@
+[
+  {
+    "name": "report_num",
+    "pattern": "\\d{5,6}"
+  }
+]

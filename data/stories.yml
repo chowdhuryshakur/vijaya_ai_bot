@@ -1,0 +1,41 @@
+version: "3.1"
+
+stories:
+
+# - story: greet_path_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+
+- story: happy_appointment_path
+  steps:
+  - intent: allocate_doctor_slot
+  - action: utter_response_for_doctor_slot
+  - intent: ask_hospital_contact
+  - action: utter_response_contact_number
+  - action: action_restart
+  
+- story: appointment_req_with_next_day_name_path
+  steps:
+  - intent: appointment_req_with_next_day_name
+    entities:
+      - day_name: "Friday"
+      - period_name: "Morning"
+  - slot_was_set:
+    - day_name: "Friday"
+  - slot_was_set:
+    - period_name: "Morning"
+  - action: utter_response_for_appointment_req_with_next_day_name
+  - intent: affirm
+  - action: utter_confirm_response_for_appointment_req_with_next_day_name
+  - action: action_restart
+
+- story: get_report_by_number_path
+  steps:
+  - intent: user_have_report_num
+  - action: utter_ask_report_number
+  - intent: tell_report_num
+  - action: utter_ask_moment_for_retrieve_report
+  - intent: affirm
+  - action: utter_successfully_retrieve_report
+  - action: action_restart

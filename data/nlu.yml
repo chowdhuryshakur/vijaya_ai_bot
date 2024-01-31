@@ -1,0 +1,115 @@
+version: "3.1"
+nlu:
+- intent: affirm
+  examples: |
+    - yes
+    - yap
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - none
+    - no thank you
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - it is not correct
+    - na
+- intent: human_handoff
+  examples: |
+    - i am confused
+    - i dont understand
+    - i want to book an appointment but i dont know whos the doctor
+    - please call me back
+    - I want a human
+    - can I speak to an agent
+    - real agent please
+    - chat with a live agent
+    - give me a person please
+    - i want to talk to a human
+    - can you transfer me to a human?
+    - handoff
+    - i need to talk to a human
+    - human please
+    - i need help from a real human
+    - give me a human
+    - i want a representative
+    - i want to talk to a person
+    - I dont like to talk to a machine
+    - I want to talk to the founders
+    - are there also humans working for your company?
+    - can I speak to a person?
+    - can i please speak to a human?
+    - can you forward me to your team
+    - can you put me in touch with a human?
+    - do you have human support ?
+    - gimme a proper human
+    - give me a human now
+    - human handoff
+    - i dont wanna talk to a bot
+    - i want to speak to a real person
+    - i want to speak to customer service
+    - i want to talk to someone else
+    - i want to talk to someone who is smarter than you
+    - i would like to speak to a person
+    - i'd rather speak with a real rasa employee
+    - id like to talk to a real rasa employee
+    - let me speak with a real person please
+    - let me talk to a human
+    - please give me a human
+    - someone from customer care
+    - speak to a real person
+    - talking to a robot is stupid
+    - that's annoying I'd like to speak to someone real
+    - thats not helping, can i talk to human?
+    - wrong i want to speak to a human
+    - can i speak to your human
+    - i want to chat with human
+    - How do I talk to a human
+    - Can i talk to a human instead
+    - nevermind.... you're not human ... I need to talk to a live person
+    - Can you get a human to assist me?
+    - Can i talk to a human?
+    - Can I speak to a human?
+    - can you hand a conversation over to a human?
+    - i want to speak to human
+    - connect me to a real person
+    - I need a real person
+    - let me speak to a real person please
+- regex: report_num
+  examples: |
+    - \d{5,6}
+- intent: allocate_doctor_slot
+  examples: |
+    - can i know the allocated slots for doctors appointment?
+    - Provide me the allocated slots for doctors appointment?
+    - What are the allocated slots for doctors appointment?
+    - Allocated slots for doctors appointment?
+- intent: ask_hospital_contact
+  examples: |
+    - can I get the contact number?
+    - can I get the contact number for the appointment?
+    - Please give the contact?
+- intent: appointment_req_with_next_day_name
+  examples: |
+    - I would want to schedule my appointment for the [afternoon](period_name) session of next [Sunday](day_name).
+    - I would want to schedule my appointment for the [night](period_name) session of next [Monday](day_name).
+    - I would want to schedule my appointment for the [morning](period_name) session of next [Tuesday](day_name).
+    - I would want to schedule my appointment for the [night](period_name) session of next [Friday](day_name).
+    - I would want to schedule my appointment for the [evening](period_name) session of next [Saturday](day_name).
+    - I would want to schedule my appointment for the [noon](period_name) session of next [Wednesday](day_name).
+- intent: user_have_report_num
+  examples: |
+    - I have my report number, I want my report.
+    - I want my report, I have my report number .
+    - I have my report number, please give me my report.
+- intent: tell_report_num
+  examples: |
+    - Here it is [123122](report_num).
+    - My report number is [123123](report_num).
+    - [123124](report_num).
