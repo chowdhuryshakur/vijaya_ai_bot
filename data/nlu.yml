@@ -120,9 +120,9 @@ nlu:
     - Schedule a blood test for me.
 - intent: tell_name_and_dob
   examples: |
-    - Name [John Doe](name) and date of birth [5th April, 1990](dob).
-    - Name [Isac](name) and date of birth [15th April, 1990](dob).
-    - Name [Kamal Hasan](name) and date of birth [7th April, 1990](dob).
+    - My name is [John Doe](name) and birth Date is [5th April, 1990](dob).
+    - My name is [Isac](name) and birth Date is [15th April, 1990](dob).
+    - My name is [Kamal Hasan](name) and birth Date is [7th April, 1990](dob).
 - intent: tell_blood_test
   examples: |
     - I want to do [complete blood count](test).
@@ -131,9 +131,9 @@ nlu:
     - I want to do [BMP](test).
 - intent: tell_preferred_schedule
   examples: |
-    - I preferred [at 5pm 21st February](schedual).
-    - I preferred [at 10am 24th February](schedual).
-    - I preferred [at 12am 25th February](schedual).
+    - I preferred at [5pm 21st February](schedual).
+    - I preferred at [10am 24th February](schedual).
+    - I preferred at [12am 25th February](schedual).
 - intent: tell_affirmly_confirm
   examples: |
     - Yes, that's perfect.
