@@ -8,10 +8,19 @@ intents:
 - appointment_req_with_next_day_name
 - user_have_report_num
 - tell_report_num
+- user_req_for_test
+- tell_name_and_dob
+- tell_blood_test
+- tell_preferred_schedule
+- tell_affirmly_confirm
 entities:
 - day_name
 - period_name
 - report_num
+- name
+- dob
+- test
+- schedual
 slots:
   day_name:
     type: text
@@ -28,6 +37,26 @@ slots:
     mappings:
     - type: from_entity
       entity: report_num
+  name:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: name
+  dob:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: dob
+  test:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: test
+  schedual:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: schedual
 responses:
   utter_handoff:
   - text: I apologize for any inconvenience caused. Allow me to transfer you to a live agent for further assistance.
@@ -60,6 +89,21 @@ responses:
   utter_successfully_retrieve_report:
   - text: |-
       Thank you for your patience. I've successfully retrieved your diagnostic report. You can view or download it here. If you have any questions, feel free to ask.
+  utter_resp_to_test_req:
+  - text: |-
+      Could you please provide your full name and date of birth for verification?
+  utter_ask_blood_test_options:
+  - text: |-
+      Thank you, {name}. Can you let me know the type of blood test you need? We offer a variety of tests, including general health panels, cholesterol checks, and diabetes screenings.
+  utter_ask_preferred_schedule:
+  - text: |-
+      Great choice. Now, let's schedule the appointment. Do you have a preferred date and time for the blood test?
+  utter_checking_availability:
+  - text: |-
+      Checking availability... I have an opening on {schedual}. Does that work for you?
+  utter_confirm_appointment:
+  - text: |-
+      Excellent! Your appointment for a {test}, is scheduled for {schedual}. Please make sure to fast for at least 8 hours before the test.
 
 session_config:
   session_expiration_time: 60
@@ -73,3 +117,8 @@ actions:
 - utter_ask_report_number
 - utter_ask_moment_for_retrieve_report
 - utter_successfully_retrieve_report
+- utter_resp_to_test_req
+- utter_ask_blood_test_options
+- utter_ask_preferred_schedule
+- utter_checking_availability
+- utter_confirm_appointment
