@@ -136,9 +136,9 @@ nlu:
     - I want to do [BMP](test).
 - intent: tell_preferred_schedule
   examples: |
-    - I preferred at [5pm 21st February](schedual).
-    - I preferred at [10am 24th February](schedual).
-    - I preferred at [12am 25th February](schedual).
+    - I prefer at [9pm 21st February](schedual).
+    - I prefer at [10am 24th February](schedual).
+    - I prefer at [12am 23th February](schedual).
 - intent: tell_affirmly_confirm
   examples: |
     - Yes, that's perfect.
