@@ -9,6 +9,7 @@ intents:
 - user_have_report_num
 - tell_report_num
 - user_req_for_test
+- user_ask_tests
 - tell_name_and_dob
 - tell_blood_test
 - tell_preferred_schedule
@@ -97,13 +98,43 @@ responses:
       Thank you, {name}. Can you let me know the type of blood test you need? We offer a variety of tests, including general health panels, cholesterol checks, and diabetes screenings.
   utter_ask_preferred_schedule:
   - text: |-
+      Now, let's schedule the appointment. Do you have a preferred date and time?
+  utter_ask_preferred_schedule_above_previous_version:
+  - text: |-
       Great choice. Now, let's schedule the appointment. Do you have a preferred date and time for the blood test?
   utter_checking_availability:
   - text: |-
       Checking availability... I have an opening on {schedual}. Does that work for you?
   utter_confirm_appointment:
   - text: |-
+     We have sent you an email for your appointment booking.
+  utter_confirm_appointment_above_previous_version:
+  - text: |-
       Excellent! Your appointment for a {test}, is scheduled for {schedual}. Please make sure to fast for at least 8 hours before the test.
+  utter_list_of_Test:
+  - text: |-
+      Certainly! Here's a list of tests we offer:
+
+      1. Diabetes
+      2. Heart
+      3. Pregnancy
+      4. Kidney
+      5. Thyroid
+      6. Cancer
+      7. Liver
+      8. Breast
+      9. COVID
+      10. Prostate
+
+      Let me know if you need  any specific test.
+  utter_ask_to_confirm_appointment:
+  - text: |-
+      Would you like to book an appointment?
+    buttons:
+    - title: "Yes"
+      payload: Ok, perfect
+    - title: "No"
+      payload: "No"
 
 session_config:
   session_expiration_time: 60
@@ -122,3 +153,5 @@ actions:
 - utter_ask_preferred_schedule
 - utter_checking_availability
 - utter_confirm_appointment
+- utter_list_of_Test
+- utter_ask_to_confirm_appointment

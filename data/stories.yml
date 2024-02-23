@@ -42,14 +42,19 @@ stories:
 
 - story: book_blood_test_path
   steps:
+  - intent: user_ask_tests
+  - action: utter_list_of_Test
   - intent: user_req_for_test
-  - action: utter_resp_to_test_req
-  - intent: tell_name_and_dob
-  - action: utter_ask_blood_test_options
-  - intent: tell_blood_test
+  # - action: utter_resp_to_test_req
+  # - intent: tell_name_and_dob
+  # - action: utter_ask_blood_test_options
+  # - intent: tell_blood_test
+  - action: utter_ask_to_confirm_appointment
+  # - action: utter_ask_preferred_schedule
+  # - intent: tell_preferred_schedule
+  # - action: utter_checking_availability
+  - intent: tell_affirmly_confirm
   - action: utter_ask_preferred_schedule
   - intent: tell_preferred_schedule
-  - action: utter_checking_availability
-  - intent: tell_affirmly_confirm
   - action: utter_confirm_appointment
   - action: action_restart

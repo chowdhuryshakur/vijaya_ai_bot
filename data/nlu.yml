@@ -115,9 +115,14 @@ nlu:
     - [123124](report_num).
 - intent: user_req_for_test
   examples: |
-    - I need to schedule a blood test. Can you help me with that?
-    - I need to schedule a blood test.
-    - Schedule a blood test for me.
+      - I want to do no.3
+      - I want to do no. 1, 2, 3
+      - 1, 2, 3, 4, 5, 6, 7
+- intent: above_old_version
+  examples: |
+    # - I need to schedule a blood test. Can you help me with that?
+    # - I need to schedule a blood test.
+    # - Schedule a blood test for me.
 - intent: tell_name_and_dob
   examples: |
     - My name is [John Doe](name) and birth Date is [5th April, 1990](dob).
@@ -139,3 +144,15 @@ nlu:
     - Yes, that's perfect.
     - That's perfect.
     - Ok, perfect.
+- intent: user_ask_tests
+  examples: |
+    - What types of tests do you offer?
+    - Could you tell me about the available tests?
+    - What kind of testing options do you provide?
+    - Can you list the tests available?
+    - What are the testing options you have?
+    - I'm interested in knowing the tests you offer.
+    - Could you provide information on your testing services?
+    - What tests are in your inventory?
+    - What are the testing options at your disposal?
+    - Can you elaborate on the tests you have?
