@@ -113,8 +113,7 @@ responses:
       Excellent! Your appointment for a {test}, is scheduled for {schedual}. Please make sure to fast for at least 8 hours before the test.
   utter_list_of_Test:
   - text: |-
-      Certainly! Here's a list of tests we offer:
-
+      Here's a list of tests we offer:
       1. Diabetes
       2. Heart
       3. Pregnancy
@@ -125,7 +124,6 @@ responses:
       8. Breast
       9. COVID
       10. Prostate
-
       Let me know if you need  any specific test.
   utter_ask_to_confirm_appointment:
   - text: |-

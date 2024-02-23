@@ -147,12 +147,5 @@ nlu:
 - intent: user_ask_tests
   examples: |
     - What types of tests do you offer?
-    - Could you tell me about the available tests?
-    - What kind of testing options do you provide?
     - Can you list the tests available?
     - What are the testing options you have?
-    - I'm interested in knowing the tests you offer.
-    - Could you provide information on your testing services?
-    - What tests are in your inventory?
-    - What are the testing options at your disposal?
-    - Can you elaborate on the tests you have?
