@@ -95,14 +95,14 @@ nlu:
     - can I get the contact number?
     - can I get the contact number for the appointment?
     - Please give the contact?
-- intent: appointment_req_with_next_day_name
-  examples: |
-    - I would want to schedule my appointment for the [afternoon](period_name) session of next [Sunday](day_name).
-    - I would want to schedule my appointment for the [night](period_name) session of next [Monday](day_name).
-    - I would want to schedule my appointment for the [morning](period_name) session of next [Tuesday](day_name).
-    - I would want to schedule my appointment for the [night](period_name) session of next [Friday](day_name).
-    - I would want to schedule my appointment for the [evening](period_name) session of next [Saturday](day_name).
-    - I would want to schedule my appointment for the [noon](period_name) session of next [Wednesday](day_name).
+# - intent: appointment_req_with_next_day_name
+#   examples: |
+#     - I would want to schedule my appointment for the [afternoon](period_name) session of next [Sunday](day_name).
+#     - I would want to schedule my appointment for the [night](period_name) session of next [Monday](day_name).
+#     - I would want to schedule my appointment for the [morning](period_name) session of next [Tuesday](day_name).
+#     - I would want to schedule my appointment for the [night](period_name) session of next [Friday](day_name).
+#     - I would want to schedule my appointment for the [evening](period_name) session of next [Saturday](day_name).
+#     - I would want to schedule my appointment for the [noon](period_name) session of next [Wednesday](day_name).
 - intent: user_have_report_num
   examples: |
     - I have my report number, I want my report.
