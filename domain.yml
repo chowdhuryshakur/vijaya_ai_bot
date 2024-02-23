@@ -107,7 +107,7 @@ responses:
       Checking availability... I have an opening on {schedual}. Does that work for you?
   utter_confirm_appointment:
   - text: |-
-     We have sent you an email for your appointment booking.
+      Your booking is confirmed for the {schedual}. We have sent you an email for confirmation. 
   utter_confirm_appointment_above_previous_version:
   - text: |-
       Excellent! Your appointment for a {test}, is scheduled for {schedual}. Please make sure to fast for at least 8 hours before the test.
